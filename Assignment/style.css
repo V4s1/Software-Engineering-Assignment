@@ -162,6 +162,10 @@ h2 {
   color: #fff;
 }
 
+h2.scroll-down-arrow {
+  text-align: center;
+}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -171,6 +175,7 @@ h2 {
 
 .nav-link {
   color: #fff;
+  font-size: larger;
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 4px;
@@ -187,8 +192,8 @@ h2 {
   background-color: rgba(51, 51, 51, 0.7);
   padding: 20px;
   margin: 0;
-  position: fixed;
-  top: 50%;
+  position: relative;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -200,10 +205,13 @@ h2 {
   align-items: center;
 }
 
-body {
-  background-image: url("https://images.wallpaperscraft.com/image/single/gymnastic_rings_rings_gym_172793_1920x1080.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.scroll-down-arrow {
+  color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
 }
 
 .nav-link.back-btn {
@@ -222,3 +230,51 @@ body {
   color: #fff;
   text-decoration: underline;
 }
+
+body, .body-part-1 {
+  height:100vh;
+  background-image: url("https://images.wallpaperscraft.com/image/single/gymnastic_rings_rings_gym_172793_1920x1080.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.body-part-2, .body-part-3 {
+  height:100vh;
+  background-color: #333;
+}
+
+h2.section-header {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  margin: 10px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.image-box img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 45px;
+}
+
+.image-box a {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: x-large ;
+}
+
