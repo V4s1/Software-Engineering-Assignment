@@ -244,6 +244,10 @@ body, .body-part-1 {
   background-color: #333;
 }
 
+.body-part-3 {
+  padding-top: 50px;
+}
+
 h2.section-header {
   text-align: center;
   font-size: 100px;
