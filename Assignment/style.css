@@ -240,12 +240,8 @@ body, .body-part-1 {
 }
 
 .body-part-2, .body-part-3 {
-  height:100vh;
+  height:115vh;
   background-color: #333;
-}
-
-.body-part-3 {
-  padding-top: 50px;
 }
 
 h2.section-header {
