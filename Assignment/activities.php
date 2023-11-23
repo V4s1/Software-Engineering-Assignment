@@ -18,6 +18,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <th>Type</th>
                 <th>Distance (km)</th>
                 <th>Duration (h:m:s)</th>
+                <th>Intensity</th>
                 <th>Date</th>
                 <th>Delete entry</th>
             </tr>
@@ -44,6 +45,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             echo "<td>" . $fetch['type'] . "</td>";
             echo "<td>" . $fetch['distance'] . "</td>";
             echo "<td>" . $fetch['duration'] . "</td>";
+            echo "<td>" . $fetch['intensity'] . "</td>";
             echo "<td>" . $fetch['date'] . "</td>";
             echo "<td><form class=delete-btn method='POST'>
             <input type=hidden name=id value=".$fetch["id"]." >
@@ -64,6 +66,13 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <input type="text" name="distance" placeholder="0"><br>
             <label>Duration</label>
             <input type="time" value="00:00:00" name="duration" step="1"><br>
+            <label>Intensity</label>
+            <select name="intensity">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Extreme">Extreme</option>
+            </select><br>
             <label>Date</label>
             <input type="date" name="date"><br>
             <input type="submit" value="Submit"></input>
