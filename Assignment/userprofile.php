@@ -2,7 +2,7 @@
 session_start();
 include "db-connection.php";
 
-$sql = "SELECT * FROM user_details WHERE user_id='{$_SESSION['id']}')";
+$sql = "SELECT * FROM user_details WHERE user_id='{$_SESSION['id']}'";
 
 $result = mysqli_query($conn, $sql);
 

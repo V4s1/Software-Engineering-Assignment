@@ -63,7 +63,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <label>Type</label>
             <input type="text" name="type" placeholder=""><br>
             <label>Distance</label>
-            <input type="text" name="distance" placeholder="0"><br>
+            <input type="number" name="distance" min="0" placeholder="0"><br>
             <label>Duration</label>
             <input type="time" value="00:00:00" name="duration" step="1"><br>
             <label>Intensity</label>

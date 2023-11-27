@@ -17,8 +17,10 @@ session_start();
         <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
+        <label>Username</label>
+        <input type="text" name="uname"><br>
         <label>Age</label>
-        <input type="text" name="age" placeholder="0"><br>
+        <input type="number" name="age" min="1" placeholder="1"><br>
         <label>Gender</label>
         <select name="gender">
             <option value="Male">Male</option>
@@ -26,9 +28,9 @@ session_start();
             <option value="Other">Other</option>
         </select><br>
         <label>Height</label>
-        <input type="text" name="height" placeholder="cm"><br>
+        <input type="number" name="height" min="1" placeholder="cm"><br>
         <label>Weight</label>
-        <input type="text" name="weight" placeholder="kg"><br>
+        <input type="number" name="weight" min="1" placeholder="kg"><br>
         <input type="submit" value="Save"></input>
     </form><br>
     <a href="userprofile.php" class="nav-link back-btn">⮜ Back</a>
