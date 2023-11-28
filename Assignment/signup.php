@@ -19,8 +19,10 @@ session_start();
         <?php if (isset($_GET['error'])) { ?>
             <p class="error"><?php echo $_GET['error']; ?></p>
         <?php } ?>
-        <label>Username (Email)</label>
-        <input type="email" name="uname" placeholder="Username"><br>
+        <label>Username</label>
+        <input type="text" name="uname" placeholder="Username"><br>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email"><br>
         <label>Password</label>
         <input type="password" name="password" placeholder="Password"><br>
         <input type="submit" value="Create account"></input>

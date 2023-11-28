@@ -2,7 +2,7 @@
 session_start();
 include "db-connection.php";
 
-if(isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['height']) && isset($_POST['weight'])) {
+if(isset($_POST['uname']) && isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['height']) && isset($_POST['weight'])) {
     function validate($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -12,19 +12,25 @@ if(isset($_POST['age']) && isset($_POST['gender']) && isset($_POST['height']) &&
     }
 }
 
+$uname = validate($_POST['uname']);
 $age = validate($_POST['age']);
 $gender = validate($_POST['gender']);
 $height = validate($_POST['height']);
 $weight = validate($_POST['weight']);
+
+if(empty($uname)) {
+    header("Location: editdetails.php?error=Username is required");
+    exit();
+}
 
 $sql = "SELECT * FROM user_details WHERE user_id='{$_SESSION['id']}'";
 
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) >= 1) {
-    $sql = "UPDATE user_details SET age='$age', gender='$gender', height='$height', weight='$weight' WHERE user_id='{$_SESSION['id']}'";
+    $sql = "UPDATE user_details SET user-name='$uname', age='$age', gender='$gender', height='$height', weight='$weight' WHERE user_id='{$_SESSION['id']}'";
 }else {
-    $sql = "INSERT INTO user_details (user_id, age, gender, height, weight) VALUES ('{$_SESSION['id']}', '$age', '$gender', '$height', '$weight')";
+    $sql = "INSERT INTO user_details (user_id, user_name, age, gender, height, weight) VALUES ('{$_SESSION['id']}', '$uname', '$age', '$gender', '$height', '$weight')";
 }
 
 if ($conn->query($sql) === TRUE) {

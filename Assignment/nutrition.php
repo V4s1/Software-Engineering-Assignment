@@ -78,7 +78,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <option value="Other">Other</option>
             </select><br>
             <label>Calories consumed</label>
-            <input type="text" name="calories" placeholder=""><br>
+            <input type="number" name="calories" min="0" placeholder=""><br>
             <input type="submit" value="Submit"></input>
         </form><br>
         <a href="home.php" class="nav-link back-btn">⮜ Back</a><br>

@@ -62,6 +62,7 @@ label {
 }
 
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="date"],
@@ -277,3 +278,4 @@ h2.section-header {
   color: #fff;
   font-size: x-large ;
 }
+
