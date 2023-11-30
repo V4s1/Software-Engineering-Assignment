@@ -28,7 +28,7 @@ $sql = "SELECT * FROM user_details WHERE user_id='{$_SESSION['id']}'";
 $result = mysqli_query($conn, $sql);
 
 if(mysqli_num_rows($result) >= 1) {
-    $sql = "UPDATE user_details SET user-name='$uname', age='$age', gender='$gender', height='$height', weight='$weight' WHERE user_id='{$_SESSION['id']}'";
+    $sql = "UPDATE user_details SET user_name='$uname', age='$age', gender='$gender', height='$height', weight='$weight' WHERE user_id='{$_SESSION['id']}'";
 }else {
     $sql = "INSERT INTO user_details (user_id, user_name, age, gender, height, weight) VALUES ('{$_SESSION['id']}', '$uname', '$age', '$gender', '$height', '$weight')";
 }
